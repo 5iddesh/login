@@ -1,5 +1,5 @@
 export default function Form() {
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // alert("succesfull");
     let name = e.target.name.value;
@@ -10,14 +10,15 @@ export default function Form() {
     e.target.name.value = e.target.email.value = e.target.password.value = "";
     alert("registration successfull!");
     console.log(userData);
-    // fetch("",{
-    //   method: "POST",
-    //   body: JSON.stringify(userData),
-    //   headers: {
-    //     "Content-type": "application/json",
-    //     "Accept": "application/json"
-    //   }
-    // })
+    const response = await fetch("http://localhost:3000/api/auth/register",{
+      method: "POST",
+      body: JSON.stringify(userData),
+      headers: {
+        "Content-type": "application/json",
+        "Accept": "application/json"
+      }
+    })
+    console.warn(response)
   };
   return (
     <form className="container" onSubmit={(e) => handleSubmit(e)}>

@@ -1,16 +1,16 @@
 import { Button } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { FcGoogle } from "react-icons/fc";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Links() {
   return (
-    <div className="links" style={{ textAlign: "center" }}>
+    <div className="links" style={{ textAlign: "center", paddingBottom: "50px" }}>
       <p>
         don't have an account?
-        {/* <Link to="/" className="login-link">
+        <Link to="/" className="login-link">
           signup
-        </Link> */}
+        </Link>
       </p>
       <b>OR</b>
       <div className="link-btns">

@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import { FcGoogle } from "react-icons/fc";
+// import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 
 export default function Links() {
@@ -14,13 +14,15 @@ export default function Links() {
       </p>
       <b>OR</b>
       <div className="link-btns">
-        <Button
+        {/* <Button
           className="google-sign-in"
           variant="outlined"
           startIcon={<FcGoogle />}
         >
           Sign up with Google
-        </Button>
+        </Button> */}
+        <Button id="google-sign-up" className="google-sign-in" style={{zIndex: "100"}}></Button>
+
 
         <Button variant="outlined" startIcon={<GitHubIcon />}>
           Sign up with Github

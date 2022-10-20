@@ -22,7 +22,7 @@ const root = createRoot(rootElement);
 
 root.render(
   <StrictMode>
-    <App />
-    {/* <RouterProvider router={router} /> */}
+    {/* <App /> */}
+    <RouterProvider router={router} />
   </StrictMode>
 );
